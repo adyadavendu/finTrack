@@ -1,9 +1,10 @@
-// Centralized API client and endpoints for FinTrack
-
 import axios from 'axios';
 
 export const apiClient = axios.create({
-  baseURL: 'http://localhost:5000/api/v1',
+  baseURL:
+    import.meta.env.MODE === 'development'
+      ? 'http://localhost:5000/api/v1'
+      : 'https://fintrack-jiwz.onrender.com/api/v1',
   timeout: 15000,
 });
 
