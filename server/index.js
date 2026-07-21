@@ -26,8 +26,8 @@ app.use(helmet());
 
 // Enable CORS
 const corsOptions = {
-  origin: process.env.ALLOWED_ORIGIN || 'http://localhost:5173',
-  credentials: true, // Allow cookies to be sent across origins
+  origin: 'https://fin-track-woad-three.vercel.app',
+  credentials: true,
 };
 app.use(cors(corsOptions));
 
